@@ -69,7 +69,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hhs-Rh-VIq">
-                                <rect key="frame" x="136" y="376" width="160" height="31"/>
+                                <rect key="frame" x="136" y="376" width="181" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="114" id="BD0-iy-k9n"/>
                                 </constraints>
@@ -106,7 +106,7 @@
                             <constraint firstAttribute="trailing" secondItem="8OP-35-2ZV" secondAttribute="trailing" constant="10" id="HR5-Dj-dUc"/>
                             <constraint firstItem="1uI-Zs-rqC" firstAttribute="centerY" secondItem="fvs-0f-rrK" secondAttribute="centerY" constant="1" id="JhR-NT-bQk"/>
                             <constraint firstItem="BhN-VE-Kkv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="K8h-tF-MbK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hhs-Rh-VIq" secondAttribute="trailing" constant="5" id="LRM-aB-5BH"/>
+                            <constraint firstAttribute="trailing" secondItem="hhs-Rh-VIq" secondAttribute="trailing" constant="5" id="LRM-aB-5BH"/>
                             <constraint firstItem="8OP-35-2ZV" firstAttribute="centerY" secondItem="fvs-0f-rrK" secondAttribute="centerY" id="OVU-x1-sSt"/>
                             <constraint firstItem="oKu-gn-4b7" firstAttribute="top" secondItem="HnA-wM-ZG2" secondAttribute="bottom" constant="11" id="Rh3-Sa-jRd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hhs-Rh-VIq" secondAttribute="trailing" constant="10" id="Rkb-8c-1nU"/>
@@ -132,6 +132,7 @@
                             <mask key="constraints">
                                 <exclude reference="rKq-b5-4Mz"/>
                                 <exclude reference="5NN-B8-ZDU"/>
+                                <exclude reference="Rkb-8c-1nU"/>
                                 <exclude reference="Rh3-Sa-jRd"/>
                                 <exclude reference="vaa-oP-HLm"/>
                                 <exclude reference="OVU-x1-sSt"/>

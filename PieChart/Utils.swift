@@ -14,6 +14,15 @@ import UIKit
 
 extension CALayer
 {
+  /*
+  This custom property lets you set a layer's border color from Interface builder using a 
+  "User Defined Runtime Attribute".
+  IB's color setting creates a UIColor, but a layer's color is a CGColor. This method simply accepts a UIColor
+  and converts it to a CGColor.
+  
+  To use it, set the layer's border color by making the keypath of the User Defined Runtime Attribute
+  layer.borderUIColor
+  */
   var borderUIColor: UIColor
   {
     set
@@ -23,6 +32,27 @@ extension CALayer
     get
     {
       return UIColor(CGColor: self.borderColor)
+    }
+  }
+  
+  /*
+  This custom property lets you set a layer's background color from Interface builder using a 
+  "User Defined Runtime Attribute".
+  IB's color setting creates a UIColor, but a layer's color properties use CGColors. 
+  This method simply accepts a UIColor and converts it to a CGColor.
+  
+  To use it, set the layer's border color by making the keypath of the User Defined Runtime Attribute
+  layer.backgroundUIColor
+  */
+  var backgroundUIColor: UIColor
+    {
+    set
+    {
+      self.backgroundColor = newValue.CGColor
+    }
+    get
+    {
+      return UIColor(CGColor: self.backgroundColor)
     }
   }
 }

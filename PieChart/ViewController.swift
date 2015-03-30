@@ -11,12 +11,18 @@ import UIKit
 class ViewController: UIViewController
 {
 
+  //-------------------------------------------------------------------------------------------------------
+  // MARK: - IBOutlets -
+  //-------------------------------------------------------------------------------------------------------
+
   @IBOutlet weak var sliceCountSlider: UISlider!
   @IBOutlet weak var sliceCountField: UITextField!
   @IBOutlet weak var varyRadiusSwitch: UISwitch!
   @IBOutlet weak var varyWidthSwitch: UISwitch!
   @IBOutlet weak var thePieChart: PieChartView!
   
+  // MARK: -
+
   var sliceCount: Int = 0
     {
     didSet(newValue)
@@ -27,6 +33,10 @@ class ViewController: UIViewController
     
   }
   
+  //-------------------------------------------------------------------------------------------------------
+  // MARK: - View controller methods -
+  //-------------------------------------------------------------------------------------------------------
+
   override func viewDidLoad()
   {
     
@@ -36,6 +46,8 @@ class ViewController: UIViewController
     // Do any additional setup after loading the view, typically from a nib.
   }
 
+  //-------------------------------------------------------------------------------------------------------
+  
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     var useWidths = false
@@ -85,10 +97,15 @@ class ViewController: UIViewController
 
 
   }
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+
+  //-------------------------------------------------------------------------------------------------------
+  // MARK: - IBAction methods -
+  //-------------------------------------------------------------------------------------------------------
 
   @IBAction func handleSlider(sender: UISlider)
   {
@@ -110,6 +127,5 @@ class ViewController: UIViewController
     }
     thePieChart.slices = newSlices
   }
-
 }
 
