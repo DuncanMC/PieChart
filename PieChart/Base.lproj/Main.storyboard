@@ -21,13 +21,24 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="520"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OP-35-2ZV">
+                                <rect key="frame" x="262" y="555" width="77" height="30"/>
+                                <state key="normal" title="Randomize">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleRandomizeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5W5-p2-oX0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8OP-35-2ZV" secondAttribute="bottom" constant="15" id="3Wi-Na-clj"/>
                             <constraint firstItem="HnA-wM-ZG2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UXQ-sD-nvg"/>
                             <constraint firstItem="HnA-wM-ZG2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="h7C-Lo-K9X"/>
                             <constraint firstItem="HnA-wM-ZG2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="rKq-b5-4Mz"/>
                             <constraint firstAttribute="trailing" secondItem="HnA-wM-ZG2" secondAttribute="trailing" id="u85-wk-0J3"/>
+                            <constraint firstAttribute="centerX" secondItem="8OP-35-2ZV" secondAttribute="centerX" id="v81-1a-gFU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HnA-wM-ZG2" secondAttribute="bottom" constant="60" id="vaa-oP-HLm"/>
                         </constraints>
                         <variation key="default">

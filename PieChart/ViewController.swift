@@ -72,6 +72,17 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  @IBAction func handleRandomizeButton(sender: UIButton)
+  {
+    var newSlices: [Slice] = [Slice]()
+    for _ in 1...thePieChart.slices.count
+    {
+      let radius = CGFloat(arc4random_uniform(UInt32.max))/CGFloat(UInt32.max)
+      let width = CGFloat(arc4random_uniform(UInt32.max))/CGFloat(UInt32.max) * 100 + 20
+      newSlices.append(Slice(radius: radius, width: width))
+    }
+    thePieChart.slices = newSlices
+  }
 
 }
 
