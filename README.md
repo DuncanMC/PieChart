@@ -47,13 +47,16 @@ The slices property of the PieChartView has a didSet property obserer, so when y
 
 This is a cool trick with Swift. This simple property declaration 
 
-   var slices: [Slice] = []
-     {
-     didSet
-     {
-       self.updatePath()
-     }
-   }
+
+    var slices: [Slice] = []
+    {
+      didSet
+      {
+        self.updatePath()
+      }
+    }
+
+...defines the property obsever.
 
 The property observer invokes the method `updatePath()` if you change the slices array or any of it's elements.
 The `updatePath()` method rebuilds the PieChart path and displays it.
