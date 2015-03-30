@@ -40,6 +40,7 @@
 		AE7560001AC8C53700EFD3D4 /* PieChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartTests.swift; sourceTree = "<group>"; };
 		AE75600A1AC8C55300EFD3D4 /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		AE75600C1AC9A45500EFD3D4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		AE75603C1AC9DE1200EFD3D4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 		AE755FE71AC8C53600EFD3D4 /* PieChart */ = {
 			isa = PBXGroup;
 			children = (
+				AE75603C1AC9DE1200EFD3D4 /* README.md */,
 				AE755FEA1AC8C53600EFD3D4 /* AppDelegate.swift */,
 				AE755FEC1AC8C53600EFD3D4 /* ViewController.swift */,
 				AE75600A1AC8C55300EFD3D4 /* PieChartView.swift */,
@@ -415,6 +417,7 @@
 				AE7560061AC8C53700EFD3D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE7560071AC8C53700EFD3D4 /* Build configuration list for PBXNativeTarget "PieChartTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +426,7 @@
 				AE7560091AC8C53700EFD3D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
