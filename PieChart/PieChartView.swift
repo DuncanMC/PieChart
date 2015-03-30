@@ -15,10 +15,10 @@ import Darwin
 
 struct Slice
 {
-  var radius: CGFloat =   0.0
-  var width:  CGFloat =   0.0
+  var radius: CGFloat
+  var width:  CGFloat
   init(
-    radius:     CGFloat,
+    radius:     CGFloat = 1,
     width:      CGFloat = 0.125
     )
   {
