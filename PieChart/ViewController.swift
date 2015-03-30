@@ -8,12 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
 
+  @IBOutlet weak var sliceCountSlider: UISlider!
+  @IBOutlet weak var sliceCountField: UITextField!
+  @IBOutlet weak var varyRadiusSwitch: UISwitch!
+  @IBOutlet weak var varyWidthSwitch: UISwitch!
   @IBOutlet weak var thePieChart: PieChartView!
+  
+  var sliceCount: Int = 0
+    {
+    didSet(newValue)
+    {
+      sliceCountSlider!.value = Float(sliceCount)
+      sliceCountField.text = "\(sliceCount)"
+    }
+    
+  }
+  
   override func viewDidLoad()
   {
     
+    sliceCountField.text = "\(sliceCount)"
+    sliceCount = 16
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
   }
@@ -72,13 +90,22 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  @IBAction func handleSlider(sender: UISlider)
+  {
+    let value = sender.value
+    sliceCount = Int(value)
+  }
+  
   @IBAction func handleRandomizeButton(sender: UIButton)
   {
+    let varyRadii = varyRadiusSwitch!.on
+    let varyWidth = varyWidthSwitch!.on
+    let radiusFraction = CGFloat(1.0) / CGFloat(thePieChart.slices.count)
     var newSlices: [Slice] = [Slice]()
-    for _ in 1...thePieChart.slices.count
+    for _ in 1...sliceCount
     {
-      let radius = CGFloat(arc4random_uniform(UInt32.max))/CGFloat(UInt32.max)
-      let width = CGFloat(arc4random_uniform(UInt32.max))/CGFloat(UInt32.max) * 100 + 20
+      let radius = varyRadii ? CGFloat(arc4random_uniform(UInt32.max))/CGFloat(UInt32.max) : 1
+      let width = varyWidth ? CGFloat(arc4random_uniform(UInt32.max))/CGFloat(UInt32.max) * 100 + 20 : radiusFraction
       newSlices.append(Slice(radius: radius, width: width))
     }
     thePieChart.slices = newSlices
