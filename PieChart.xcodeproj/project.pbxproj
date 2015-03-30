@@ -13,6 +13,8 @@
 		AE755FF21AC8C53600EFD3D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE755FF11AC8C53600EFD3D4 /* Images.xcassets */; };
 		AE755FF51AC8C53600EFD3D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE755FF31AC8C53600EFD3D4 /* LaunchScreen.xib */; };
 		AE7560011AC8C53700EFD3D4 /* PieChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7560001AC8C53700EFD3D4 /* PieChartTests.swift */; };
+		AE75600B1AC8C55300EFD3D4 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75600A1AC8C55300EFD3D4 /* PieChartView.swift */; };
+		AE75600D1AC9A45500EFD3D4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75600C1AC9A45500EFD3D4 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		AE755FFA1AC8C53700EFD3D4 /* PieChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PieChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE755FFF1AC8C53700EFD3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE7560001AC8C53700EFD3D4 /* PieChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartTests.swift; sourceTree = "<group>"; };
+		AE75600A1AC8C55300EFD3D4 /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		AE75600C1AC9A45500EFD3D4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +83,9 @@
 			children = (
 				AE755FEA1AC8C53600EFD3D4 /* AppDelegate.swift */,
 				AE755FEC1AC8C53600EFD3D4 /* ViewController.swift */,
+				AE75600A1AC8C55300EFD3D4 /* PieChartView.swift */,
 				AE755FEE1AC8C53600EFD3D4 /* Main.storyboard */,
+				AE75600C1AC9A45500EFD3D4 /* Utils.swift */,
 				AE755FF11AC8C53600EFD3D4 /* Images.xcassets */,
 				AE755FF31AC8C53600EFD3D4 /* LaunchScreen.xib */,
 				AE755FE81AC8C53600EFD3D4 /* Supporting Files */,
@@ -212,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE75600B1AC8C55300EFD3D4 /* PieChartView.swift in Sources */,
 				AE755FED1AC8C53600EFD3D4 /* ViewController.swift in Sources */,
 				AE755FEB1AC8C53600EFD3D4 /* AppDelegate.swift in Sources */,
+				AE75600D1AC9A45500EFD3D4 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
