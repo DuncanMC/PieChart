@@ -41,6 +41,7 @@
 		AE75600A1AC8C55300EFD3D4 /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		AE75600C1AC9A45500EFD3D4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		AE75603C1AC9DE1200EFD3D4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		AE75603F1AC9E3B800EFD3D4 /* Screenshot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Screenshot.jpg; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 		AE755FE81AC8C53600EFD3D4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE75603F1AC9E3B800EFD3D4 /* Screenshot.jpg */,
 				AE755FE91AC8C53600EFD3D4 /* Info.plist */,
 			);
 			name = "Supporting Files";
