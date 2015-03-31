@@ -58,8 +58,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Very wedge sizes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvs-0f-rrK">
-                                <rect key="frame" x="69" y="451" width="133" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vary slice widths" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvs-0f-rrK">
+                                <rect key="frame" x="69" y="451" width="128" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="6YP-uf-9dB"/>
                                     <constraint firstAttribute="height" constant="21" id="Yd8-Zu-TGB"/>
