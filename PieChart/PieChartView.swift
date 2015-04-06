@@ -31,6 +31,9 @@ struct Slice
 
 class PieChartView: UIView
 {
+  var animating: Bool = false
+  var dontAnimatePathChanges: Bool = false
+  var myAnimationDelegate: MyCAAnimationDelegateProtocol?
   var oldSliceCount = 0
   var slices: [Slice] = []
     {
@@ -52,8 +55,9 @@ class PieChartView: UIView
       return
     }
     
-    if let requiredShapeLayer = myShapeLayer
+    if let myShapeLayer = myShapeLayer
     {
+      myShapeLayer.removeAllAnimations()
       //First count the total width value so we can make the size of each slice proportional
       for aSlice in slices
       {
@@ -62,8 +66,8 @@ class PieChartView: UIView
       
       //Setup for building our path.
       let path = UIBezierPath()
-      let center = CGPointMake(CGRectGetMidX(requiredShapeLayer.bounds),
-        CGRectGetMidY(requiredShapeLayer.bounds))
+      let center = CGPointMake(CGRectGetMidX(myShapeLayer.bounds),
+        CGRectGetMidY(myShapeLayer.bounds))
       path.moveToPoint(center)
       var startAngle:CGFloat = 0.0
       let maxRadius:CGFloat = min(self.bounds.size.width,
@@ -89,26 +93,29 @@ class PieChartView: UIView
         If the number of slices changed then animation won't work
         (path animation requires that the start and end path have the same number of control points
       */
-      if oldSliceCount == slices.count
+      if oldSliceCount == slices.count && !animating
       {
         //Create a CABasicAnimation to animate the path
         let pathAnimation = CABasicAnimation(keyPath: "path")
         
         //Make the animation start from the old path
-        if let oldPath = requiredShapeLayer.path
+        if let oldPath = myShapeLayer.path
         {
           pathAnimation.fromValue = oldPath as AnyObject
         }
         
         //Animate the changes to the path
         pathAnimation.toValue = path.CGPath as AnyObject
-        pathAnimation.duration = 0.2
-        requiredShapeLayer.path = path.CGPath
-        requiredShapeLayer.addAnimation(pathAnimation, forKey: "path")
+        pathAnimation.duration = 0.3
+        //pathAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        myShapeLayer.path = path.CGPath
+        pathAnimation.delegate = self
+        animating = true
+        myShapeLayer.addAnimation(pathAnimation, forKey: "path")
       }
       else
       {
-        requiredShapeLayer.path = path.CGPath
+        myShapeLayer.path = path.CGPath
       }
       oldSliceCount = slices.count
     }
@@ -162,7 +169,16 @@ class PieChartView: UIView
     {
       requiredShapeLayer.frame = self.layer.bounds
     }
+    myShapeLayer?.removeAllAnimations()
     self.updatePath()
   }
   
+  override func animationDidStop(theAnimation: CAAnimation!, finished flag: Bool)
+  {
+    if myAnimationDelegate != nil
+    {
+      animating = false
+      myAnimationDelegate?.animationDidStop( theAnimation, finished: flag)
+    }
+  }
 }

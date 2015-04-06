@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE701C8A1AD30A3E003A02F7 /* MyCAAnimationDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE701C891AD30A3E003A02F7 /* MyCAAnimationDelegateProtocol.swift */; };
 		AE755FEB1AC8C53600EFD3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE755FEA1AC8C53600EFD3D4 /* AppDelegate.swift */; };
 		AE755FED1AC8C53600EFD3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE755FEC1AC8C53600EFD3D4 /* ViewController.swift */; };
 		AE755FF01AC8C53600EFD3D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE755FEE1AC8C53600EFD3D4 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE701C891AD30A3E003A02F7 /* MyCAAnimationDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCAAnimationDelegateProtocol.swift; sourceTree = "<group>"; };
 		AE755FE51AC8C53600EFD3D4 /* PieChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PieChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE755FE91AC8C53600EFD3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE755FEA1AC8C53600EFD3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				AE75603C1AC9DE1200EFD3D4 /* README.md */,
+				AE701C891AD30A3E003A02F7 /* MyCAAnimationDelegateProtocol.swift */,
 				AE755FEA1AC8C53600EFD3D4 /* AppDelegate.swift */,
 				AE755FEC1AC8C53600EFD3D4 /* ViewController.swift */,
 				AE75600A1AC8C55300EFD3D4 /* PieChartView.swift */,
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE701C8A1AD30A3E003A02F7 /* MyCAAnimationDelegateProtocol.swift in Sources */,
 				AE75600B1AC8C55300EFD3D4 /* PieChartView.swift in Sources */,
 				AE755FED1AC8C53600EFD3D4 /* ViewController.swift in Sources */,
 				AE755FEB1AC8C53600EFD3D4 /* AppDelegate.swift in Sources */,

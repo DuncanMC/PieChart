@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class ViewController: UIViewController, MyCAAnimationDelegateProtocol
 {
 
   //-------------------------------------------------------------------------------------------------------
@@ -19,6 +19,7 @@ class ViewController: UIViewController
   @IBOutlet weak var sliceCountField: UITextField!
   @IBOutlet weak var varyRadiusSwitch: UISwitch!
   @IBOutlet weak var varyWidthSwitch: UISwitch!
+  @IBOutlet weak var animateSwitch: UISwitch!
   @IBOutlet weak var thePieChart: PieChartView!
   
   // MARK: -
@@ -44,6 +45,7 @@ class ViewController: UIViewController
     sliceCount = 16
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    thePieChart.myAnimationDelegate = self
   }
 
   //-------------------------------------------------------------------------------------------------------
@@ -106,6 +108,9 @@ class ViewController: UIViewController
   //-------------------------------------------------------------------------------------------------------
   // MARK: - IBAction methods -
   //-------------------------------------------------------------------------------------------------------
+  @IBAction func handleAnimateSwitch(sender: UISwitch)
+  {
+  }
 
   @IBAction func handleSlider(sender: UISlider)
   {
@@ -113,7 +118,7 @@ class ViewController: UIViewController
     sliceCount = Int(value)
   }
   
-  @IBAction func handleRandomizeButton(sender: UIButton)
+  @IBAction func handleRandomizeButton(sender: UIButton?)
   {
     let varyRadii = varyRadiusSwitch!.on
     let varyWidth = varyWidthSwitch!.on
@@ -127,5 +132,18 @@ class ViewController: UIViewController
     }
     thePieChart.slices = newSlices
   }
+  
+  //-------------------------------------------------------------------------------------------------------
+  // MARK: - MyCAAnimationDelegateProtocol methods -
+  //-------------------------------------------------------------------------------------------------------
+  
+  override func animationDidStop(theAnimation: CAAnimation!, finished flag: Bool)
+  {
+    if animateSwitch.on
+    {
+      self.handleRandomizeButton(nil)
+    }
+  }
+
 }
 

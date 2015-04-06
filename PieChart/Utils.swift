@@ -31,7 +31,7 @@ extension CALayer
     }
     get
     {
-      return UIColor(CGColor: self.borderColor)
+      return UIColor(CGColor: self.borderColor)!
     }
   }
   
@@ -52,7 +52,7 @@ extension CALayer
     }
     get
     {
-      return UIColor(CGColor: self.backgroundColor)
+      return UIColor(CGColor: self.backgroundColor)!
     }
   }
 }
