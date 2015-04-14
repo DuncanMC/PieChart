@@ -28,7 +28,7 @@ struct Slice
 }
 
 //-------------------------------------------------------------------------------------------------------
-
+@IBDesignable
 class PieChartView: UIView
 {
   var animating: Bool = false
@@ -144,6 +144,25 @@ class PieChartView: UIView
         alpha: 0.2).CGColor
       self.layer.addSublayer(myShapeLayer)
     }
+    self.slices = [
+      Slice(radius: 1.0, width: 0.1),
+      Slice(radius: 0.7, width: 0.15),
+      Slice(radius: 0.6, width: 0.125),
+      Slice(radius: 0.4, width: 0.0625),
+      Slice(radius: 0.75, width: 0.1875),
+      Slice(radius: 0.5, width: 0.125),
+      Slice(radius: 0.3, width: 0.3),
+      Slice(radius: 1.0, width: 0.1),
+      Slice(radius: 1.0, width: 0.1),
+      Slice(radius: 0.7, width: 0.15),
+      Slice(radius: 0.6, width: 0.125),
+      Slice(radius: 0.4, width: 0.0625),
+      Slice(radius: 0.75, width: 0.1875),
+      Slice(radius: 0.5, width: 0.125),
+      Slice(radius: 0.3, width: 0.3),
+      Slice(radius: 1.0, width: 0.1)
+    ]
+
   }
   
   override init(frame: CGRect)
@@ -155,6 +174,8 @@ class PieChartView: UIView
   
   required init(coder aDecoder: NSCoder)
   {
+
+    println("In \(__FUNCTION__)")
     myShapeLayer = CAShapeLayer()
     super.init(coder: aDecoder)
     self.setup()
