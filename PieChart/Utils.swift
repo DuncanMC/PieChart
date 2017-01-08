@@ -27,11 +27,11 @@ extension CALayer
   {
     set
     {
-      self.borderColor = newValue.CGColor
+      self.borderColor = newValue.cgColor
     }
     get
     {
-      return UIColor(CGColor: self.borderColor)!
+      return UIColor(cgColor: self.borderColor!)
     }
   }
   
@@ -48,11 +48,11 @@ extension CALayer
     {
     set
     {
-      self.backgroundColor = newValue.CGColor
+      self.backgroundColor = newValue.cgColor
     }
     get
     {
-      return UIColor(CGColor: self.backgroundColor)!
+      return UIColor(cgColor: self.backgroundColor!)
     }
   }
 }

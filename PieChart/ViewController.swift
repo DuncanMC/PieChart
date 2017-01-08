@@ -50,9 +50,9 @@ class ViewController: UIViewController, MyCAAnimationDelegateProtocol
 
   //-------------------------------------------------------------------------------------------------------
   
-  override func viewDidAppear(animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    var useWidths = false
+    let useWidths = false
     if useWidths
     {
     thePieChart.slices = [
@@ -108,20 +108,20 @@ class ViewController: UIViewController, MyCAAnimationDelegateProtocol
   //-------------------------------------------------------------------------------------------------------
   // MARK: - IBAction methods -
   //-------------------------------------------------------------------------------------------------------
-  @IBAction func handleAnimateSwitch(sender: UISwitch)
+  @IBAction func handleAnimateSwitch(_ sender: UISwitch)
   {
   }
 
-  @IBAction func handleSlider(sender: UISlider)
+  @IBAction func handleSlider(_ sender: UISlider)
   {
     let value = sender.value
     sliceCount = Int(value)
   }
   
-  @IBAction func handleRandomizeButton(sender: UIButton?)
+  @IBAction func handleRandomizeButton(_ sender: UIButton?)
   {
-    let varyRadii = varyRadiusSwitch!.on
-    let varyWidth = varyWidthSwitch!.on
+    let varyRadii = varyRadiusSwitch!.isOn
+    let varyWidth = varyWidthSwitch!.isOn
     let radiusFraction = CGFloat(1.0) / CGFloat(thePieChart.slices.count)
     var newSlices: [Slice] = [Slice]()
     for _ in 1...sliceCount
@@ -137,9 +137,9 @@ class ViewController: UIViewController, MyCAAnimationDelegateProtocol
   // MARK: - MyCAAnimationDelegateProtocol methods -
   //-------------------------------------------------------------------------------------------------------
   
-  override func animationDidStop(theAnimation: CAAnimation!, finished flag: Bool)
+  func animationDidStop(_ theAnimation: CAAnimation!, finished flag: Bool)
   {
-    if animateSwitch.on
+    if animateSwitch.isOn
     {
       self.handleRandomizeButton(nil)
     }

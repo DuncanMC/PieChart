@@ -12,5 +12,5 @@ import UIKit
 
 @objc protocol MyCAAnimationDelegateProtocol
 {
-  func animationDidStop(theAnimation: CAAnimation!, finished flag: Bool)
+  func animationDidStop(_ theAnimation: CAAnimation!, finished flag: Bool)
 }
